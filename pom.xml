@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.quarkiverse</groupId>
+    <artifactId>quarkiverse-parent</artifactId>
+    <version>7</version>
+  </parent>
+
+  <groupId>io.quarkiverse.microprofile</groupId>
+  <artifactId>quarkus-microprofile-parent</artifactId>
+  <version>2.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Quarkus - MicroProfile - Parent</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <compiler.plugin.version>3.8.1</compiler.plugin.version>
+    <surefire.plugin.version>3.0.0-M5</surefire.plugin.version>
+    <wiremock.plugin.version>7.0.0</wiremock.plugin.version>
+    <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
+
+    <quarkus.version>2.1.0.Final</quarkus.version>
+    <microprofile.config.version>2.0</microprofile.config.version>
+    <microprofile.jwt.version>1.2</microprofile.jwt.version>
+    <microprofile.health.version>3.1</microprofile.health.version>
+    <microprofile.fault-tolerance.version>3.0</microprofile.fault-tolerance.version>
+    <microprofile.metrics.version>3.0</microprofile.metrics.version>
+    <microprofile.openapi.version>2.0.1-RC1</microprofile.openapi.version>
+    <microprofile.opentracing.version>2.0</microprofile.opentracing.version>
+    <microprofile.rest-client.version>2.0</microprofile.rest-client.version>
+
+    <arquillian.version>1.6.0.Final</arquillian.version>
+  </properties>
+
+  <modules>
+    <module>runtime</module>
+    <module>deployment</module>
+    <module>tck</module>
+  </modules>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${compiler.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>io.quarkus</groupId>
+          <artifactId>quarkus-bootstrap-maven-plugin</artifactId>
+          <version>${quarkus.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${surefire.plugin.version}</version>
+          <configuration>
+            <reuseForks>false</reuseForks>
+            <systemProperties>
+              <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+            </systemProperties>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>uk.co.automatictester</groupId>
+          <artifactId>wiremock-maven-plugin</artifactId>
+          <version>${wiremock.plugin.version}</version>
+          <dependencies>
+            <!-- plugin defines "wiremock" artifactId (in provided scope), not the preferred "wiremock-jre8"
+                 which cannot be forced here, see https://issues.apache.org/jira/browse/MNG-6222 -->
+            <dependency>
+              <groupId>com.github.tomakehurst</groupId>
+              <artifactId>wiremock</artifactId>
+              <version>${wiremock.jre8.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-bom</artifactId>
+        <version>${quarkus.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>io.quarkiverse.microprofile</groupId>
+        <artifactId>quarkus-microprofile</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
