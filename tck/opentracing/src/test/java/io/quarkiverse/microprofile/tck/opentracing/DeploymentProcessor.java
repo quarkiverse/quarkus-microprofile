@@ -1,6 +1,5 @@
 package io.quarkiverse.microprofile.tck.opentracing;
 
-import org.eclipse.microprofile.opentracing.ClientTracingRegistrarProvider;
 import org.jboss.arquillian.container.test.spi.client.deployment.ApplicationArchiveProcessor;
 import org.jboss.arquillian.test.spi.TestClass;
 import org.jboss.shrinkwrap.api.Archive;
@@ -11,18 +10,10 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
  * @author Jan Martiska
  */
 public class DeploymentProcessor implements ApplicationArchiveProcessor {
-
     @Override
     public void process(Archive<?> archive, TestClass testClass) {
         if (archive instanceof WebArchive) {
-            WebArchive war = WebArchive.class.cast(archive);
-
-            // enable tracing on the client side
-            war.addAsServiceProvider(ClientTracingRegistrarProvider.class,
-                    ResteasyClientTracingRegistrarProvider.class);
-            war.addClasses(ResteasyClientTracingRegistrarProvider.class);
-
-            // override the default TracerProducer
+            WebArchive war = (WebArchive) archive;
             war.addClass(MockTracerProducer.class);
         }
     }

@@ -1,12 +1,11 @@
-
-package io.quarkiverse.microprofile.tck.opentracing;
+package io.quarkiverse.microprofile.opentracing;
 
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import javax.enterprise.inject.spi.CDI;
 import javax.ws.rs.client.ClientBuilder;
 
+import org.eclipse.microprofile.context.ManagedExecutor;
 import org.eclipse.microprofile.opentracing.ClientTracingRegistrarProvider;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 
@@ -17,7 +16,7 @@ import io.smallrye.opentracing.SmallRyeClientTracingFeature;
 public class ResteasyClientTracingRegistrarProvider implements ClientTracingRegistrarProvider {
 
     public ClientBuilder configure(ClientBuilder clientBuilder) {
-        return configure(clientBuilder, Executors.newFixedThreadPool(10));
+        return configure(clientBuilder, CDI.current().select(ManagedExecutor.class).get());
     }
 
     public ClientBuilder configure(ClientBuilder clientBuilder, ExecutorService executorService) {
