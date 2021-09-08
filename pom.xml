@@ -102,6 +102,14 @@
         <artifactId>quarkus-microprofile</artifactId>
         <version>${project.version}</version>
       </dependency>
+
+      <!-- Jandex bug: https://github.com/wildfly/jandex/pull/114 -->
+      <!-- Remove when included in Quarkus -->
+      <dependency>
+        <groupId>org.jboss</groupId>
+        <artifactId>jandex</artifactId>
+        <version>2.4.0.Final</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 </project>
