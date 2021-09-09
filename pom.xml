@@ -70,6 +70,17 @@
           </configuration>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-report-plugin</artifactId>
+          <version>${surefire.plugin.version}</version>
+          <configuration>
+            <aggregate>true</aggregate>
+            <title>Quarkus MicroProfile</title>
+            <outputName>tck-results</outputName>
+            <outputDirectory>${project.build.directory}</outputDirectory>
+          </configuration>
+        </plugin>
+        <plugin>
           <groupId>uk.co.automatictester</groupId>
           <artifactId>wiremock-maven-plugin</artifactId>
           <version>${wiremock.plugin.version}</version>

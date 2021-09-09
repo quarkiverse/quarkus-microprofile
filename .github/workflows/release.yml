@@ -65,3 +65,16 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           milestone-title: ${{steps.metadata.outputs.current-version}}
+
+      - name: generate tck report
+        run: |
+          mvn surefire-report:report-only
+          mv target/tck-results.html .
+
+      - uses: meeDamian/github-release@2.0
+        name: upload tck asset to release
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          tag: ${{steps.metadata.outputs.current-version}}
+          gzip: false
+          files: tck-results.html
