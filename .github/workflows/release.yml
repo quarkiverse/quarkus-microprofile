@@ -21,8 +21,6 @@ jobs:
           metadata-file-path: '.github/project.yml'
 
       - uses: actions/checkout@v2
-        with:
-          token: ${{secrets.RELEASE_TOKEN}}
 
       - name: Import GPG key
         id: import_gpg
