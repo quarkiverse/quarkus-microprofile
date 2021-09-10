@@ -74,5 +74,6 @@ jobs:
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           tag: ${{steps.metadata.outputs.current-version}}
+          allow_override: true
           gzip: false
           files: tck-results.html
