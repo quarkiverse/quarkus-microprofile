@@ -4,7 +4,7 @@
     <parent>
         <groupId>io.quarkiverse.microprofile</groupId>
         <artifactId>quarkus-microprofile-tck</artifactId>
-        <version>2.2.2-SNAPSHOT</version>
+        <version>2.2.2.CR1</version>
     </parent>
 
     <artifactId>quarkus-microprofile-tck-metrics</artifactId>
@@ -18,7 +18,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <systemPropertyVariables>
-                        <context.root/>
+                        <context.root />
                     </systemPropertyVariables>
                     <environmentVariables>
                         <MP_METRICS_TAGS>tier=integration</MP_METRICS_TAGS>
