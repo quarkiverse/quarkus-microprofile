@@ -1,4 +1,4 @@
 name: Quarkiverse MicroProfile
 release:
-  current-version: 2.2.3.CR1
-  next-version: 2.2.3-SNAPSHOT
+  current-version: 2.2.3.Final
+  next-version: 999-SNAPSHOT
