@@ -25,8 +25,8 @@
                         <dependency>org.eclipse.microprofile.rest.client:microprofile-rest-client-tck</dependency>
                     </dependenciesToScan>
                     <excludes>
-                        <!-- ConversationScope not supported in Quarkus -->
                         <exclude>org.eclipse.microprofile.rest.client.tck.cditests.HasConversationScopeTest</exclude>
+                        <exclude>org.eclipse.microprofile.rest.client.tck.cditests.HasSessionScopeTest</exclude>
                     </excludes>
                 </configuration>
             </plugin>
@@ -53,13 +53,6 @@
         <dependency>
             <groupId>io.quarkiverse.microprofile</groupId>
             <artifactId>quarkus-microprofile</artifactId>
-        </dependency>
-
-        <!-- This is required for HasSessionScopeTest -->
-        <!-- Should this move to the aggregate? The issue is then Undertow will be used instead of Vert.x with RESTEasy for no gain. -->
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-undertow</artifactId>
         </dependency>
 
         <dependency>
