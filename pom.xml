@@ -26,7 +26,7 @@
     <wiremock.plugin.version>7.0.0</wiremock.plugin.version>
     <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
 
-    <quarkus.version>2.2.3.Final</quarkus.version>
+    <quarkus.version>2.3.1.Final</quarkus.version>
     <microprofile.config.version>2.0</microprofile.config.version>
     <microprofile.jwt.version>1.2.1</microprofile.jwt.version>
     <microprofile.health.version>3.1</microprofile.health.version>
