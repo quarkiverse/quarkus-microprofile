@@ -1,1 +1,1 @@
-io.quarkiverse.microprofile.opentracing.ResteasyClientTracingRegistrarProvider
+#io.quarkiverse.microprofile.opentracing.ResteasyClientTracingRegistrarProvider
