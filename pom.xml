@@ -34,7 +34,7 @@
     <microprofile.metrics.version>3.0</microprofile.metrics.version>
     <microprofile.openapi.version>2.0.1-RC1</microprofile.openapi.version>
     <microprofile.opentracing.version>2.0</microprofile.opentracing.version>
-    <microprofile.rest-client.version>2.0</microprofile.rest-client.version>
+    <microprofile.rest-client.version>3.0</microprofile.rest-client.version>
 
     <arquillian.version>1.6.0.Final</arquillian.version>
   </properties>
