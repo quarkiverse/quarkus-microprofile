@@ -21,7 +21,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <maven.version>3.8.1</maven.version>
-    <compiler.plugin.version>3.8.1</compiler.plugin.version>
+    <compiler.plugin.version>3.10.0</compiler.plugin.version>
     <surefire.plugin.version>3.0.0-M5</surefire.plugin.version>
     <wiremock.plugin.version>7.0.0</wiremock.plugin.version>
     <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
@@ -32,7 +32,7 @@
     <microprofile.health.version>3.1</microprofile.health.version>
     <microprofile.fault-tolerance.version>3.0</microprofile.fault-tolerance.version>
     <microprofile.metrics.version>3.0</microprofile.metrics.version>
-    <microprofile.openapi.version>2.0.1-RC1</microprofile.openapi.version>
+    <microprofile.openapi.version>2.0.1</microprofile.openapi.version>
     <microprofile.opentracing.version>2.0</microprofile.opentracing.version>
     <microprofile.rest-client.version>2.0</microprofile.rest-client.version>
 
