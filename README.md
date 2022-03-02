@@ -15,6 +15,6 @@ To use the extension, add the dependency to the target project:
 <dependency>
     <groupId>io.quarkiverse.microprofile</groupId>
     <artifactId>quarkus-microprofile</artifactId>
-    <version>2.4.1.Final</version>
+    <version>2.7.2.Final</version>
 </dependency>
 ```
