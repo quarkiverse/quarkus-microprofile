@@ -19,4 +19,4 @@ To use the extension, add the dependency to the target project:
 </dependency>
 ```
 
-:information_source: **Recommended Quarkus version: `2.7.2.Final` or higher **
+:information_source: **Recommended Quarkus version: `2.7.2.Final` or higher**
