@@ -2,8 +2,8 @@ package io.quarkiverse.microprofile.opentracing;
 
 import java.util.concurrent.ExecutorService;
 
-import javax.enterprise.inject.spi.CDI;
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.enterprise.inject.spi.CDI;
+import jakarta.ws.rs.client.ClientBuilder;
 
 import org.eclipse.microprofile.context.ManagedExecutor;
 import org.eclipse.microprofile.opentracing.ClientTracingRegistrarProvider;
