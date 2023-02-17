@@ -10,7 +10,7 @@
 
   <groupId>io.quarkiverse.microprofile</groupId>
   <artifactId>quarkus-microprofile-parent</artifactId>
-  <version>3.0.0.Alpha3</version>
+  <version>999-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Quarkus - MicroProfile - Parent</name>
@@ -104,8 +104,4 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-  <scm>
-    <tag>3.0.0.Alpha3</tag>
-  </scm>
 </project>
