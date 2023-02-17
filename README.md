@@ -15,8 +15,8 @@ To use the extension, add the dependency to the target project:
 <dependency>
     <groupId>io.quarkiverse.microprofile</groupId>
     <artifactId>quarkus-microprofile</artifactId>
-    <version>2.7.2.Final</version>
+    <version>3.0.0.Alpha3</version>
 </dependency>
 ```
 
-:information_source: **Recommended Quarkus version: `2.7.2.Final` or higher**
+:information_source: **Recommended Quarkus version: `3.0.0.Alpha3` or higher**
