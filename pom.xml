@@ -5,7 +5,7 @@
   <parent>
     <groupId>io.quarkiverse</groupId>
     <artifactId>quarkiverse-parent</artifactId>
-    <version>12</version>
+    <version>13</version>
   </parent>
 
   <groupId>io.quarkiverse.microprofile</groupId>
@@ -16,12 +16,12 @@
   <name>Quarkus - MicroProfile - Parent</name>
 
   <properties>
-    <maven.version>3.8.1</maven.version>
-    <surefire.plugin.version>3.0.0-M7</surefire.plugin.version>
+    <maven.version>3.9.1</maven.version>
+    <surefire.plugin.version>3.0.0</surefire.plugin.version>
     <wiremock.plugin.version>7.3.0</wiremock.plugin.version>
     <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
 
-    <quarkus.version>3.0.0.Alpha3</quarkus.version>
+    <quarkus.version>3.0.0.Final</quarkus.version>
     <microprofile.config.version>3.0.2</microprofile.config.version>
     <microprofile.jwt.version>2.0</microprofile.jwt.version>
     <microprofile.health.version>4.0.1</microprofile.health.version>
@@ -53,9 +53,9 @@
           <version>${surefire.plugin.version}</version>
           <configuration>
             <reuseForks>false</reuseForks>
-            <systemProperties>
+            <systemPropertyVariables>
               <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-            </systemProperties>
+            </systemPropertyVariables>
           </configuration>
         </plugin>
         <plugin>
