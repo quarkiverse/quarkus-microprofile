@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>io.quarkiverse</groupId>
     <artifactId>quarkiverse-parent</artifactId>
     <version>13</version>
   </parent>
-
   <groupId>io.quarkiverse.microprofile</groupId>
   <artifactId>quarkus-microprofile-parent</artifactId>
   <version>999-SNAPSHOT</version>
   <packaging>pom</packaging>
-
   <name>Quarkus - MicroProfile - Parent</name>
-
   <properties>
     <maven.version>3.9.1</maven.version>
     <surefire.plugin.version>3.0.0</surefire.plugin.version>
     <wiremock.plugin.version>7.3.0</wiremock.plugin.version>
     <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
-
     <quarkus.version>3.0.0.Final</quarkus.version>
     <microprofile.config.version>3.0.2</microprofile.config.version>
     <microprofile.jwt.version>2.0</microprofile.jwt.version>
@@ -30,15 +25,17 @@
     <microprofile.openapi.version>3.0</microprofile.openapi.version>
     <microprofile.opentracing.version>3.0</microprofile.opentracing.version>
     <microprofile.rest-client.version>3.0.1</microprofile.rest-client.version>
-
     <arquillian.version>1.7.0.Alpha14</arquillian.version>
   </properties>
-
+  <scm>
+    <connection>scm:git:git@github.com:quarkiverse/quarkus-microprofile.git</connection>
+    <developerConnection>scm:git:git@github.com:quarkiverse/quarkus-microprofile.git</developerConnection>
+    <url>https://github.com/quarkiverse/quarkus-microprofile</url>
+  </scm>
   <modules>
     <module>platform</module>
     <module>tck</module>
   </modules>
-
   <build>
     <pluginManagement>
       <plugins>
@@ -86,7 +83,6 @@
       </plugins>
     </pluginManagement>
   </build>
-
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -96,7 +92,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
       <dependency>
         <groupId>io.quarkiverse.microprofile</groupId>
         <artifactId>quarkus-microprofile</artifactId>
