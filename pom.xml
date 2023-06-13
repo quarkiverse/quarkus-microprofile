@@ -13,7 +13,6 @@
   <name>Quarkus - MicroProfile - Parent</name>
   <properties>
     <maven.version>3.9.2</maven.version>
-    <surefire.plugin.version>3.0.0</surefire.plugin.version>
     <wiremock.plugin.version>7.3.0</wiremock.plugin.version>
     <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
     <quarkus.version>3.0.0.Final</quarkus.version>
@@ -47,7 +46,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>${surefire.plugin.version}</version>
+          <version>${version.surefire.plugin}</version>
           <configuration>
             <reuseForks>false</reuseForks>
             <systemPropertyVariables>
@@ -58,7 +57,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>${surefire.plugin.version}</version>
+          <version>${version.surefire.plugin}</version>
           <configuration>
             <aggregate>true</aggregate>
             <title>Quarkus MicroProfile</title>
