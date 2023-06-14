@@ -1,0 +1,53 @@
+# These tests must use the provider supplied by the application, but instead we are using the built-in provider from RESTEasy, since they are registered with the same priority. There is a boolean flag for built-in, that we are not using properly in Quarkus, which should fix the selecting priority
+ee.jakarta.tck.ws.rs.spec.provider.overridestandard.JAXRSClientIT#readWriteDataSourceProviderTest
+ee.jakarta.tck.ws.rs.spec.provider.overridestandard.JAXRSClientIT#readWriteReaderProviderTest
+ee.jakarta.tck.ws.rs.spec.provider.overridestandard.JAXRSClientIT#readWriteStringProviderTest
+
+# The resource method returns null and the writer is not applied (it automatically returns a no content)
+ee.jakarta.tck.ws.rs.spec.provider.jaxbcontext.JAXRSClientIT#readWriteProviderTest
+
+# CDI Issues. When you have an Application class, the list classes are the only ones considered for the REST app. We shouldn't create CDI beans for other annotated resources.
+ee.jakarta.tck.ws.rs.spec.resource.locator.JAXRSClientIT
+ee.jakarta.tck.ws.rs.spec.resourceconstructor.JAXRSClientIT
+
+# Spec allows '%' in @ApplicationPath. Quarkus does not. Check UriNormalizationUtil.java:42)
+ee.jakarta.tck.ws.rs.servlet3.rs.applicationpath.JAXRSClientIT
+
+# Hangs
+ee.jakarta.tck.ws.rs.ee.rs.container.responsecontext.JAXRSClientIT#setEntityStreamTest
+
+# ???
+ee.jakarta.tck.ws.rs.spec.client.exceptions.ClientExceptionsIT
+ee.jakarta.tck.ws.rs.spec.client.typedentities.JAXRSClientIT#clientAnyReaderUsageTest
+ee.jakarta.tck.ws.rs.spec.client.typedentities.JAXRSClientIT#clientAnyWriterUsageTest
+ee.jakarta.tck.ws.rs.spec.context.server.JAXRSClientIT
+ee.jakarta.tck.ws.rs.spec.contextprovider.JsonbContextProviderIT
+ee.jakarta.tck.ws.rs.spec.filter.globalbinding.JAXRSClientIT#globalBoundResourceTest
+ee.jakarta.tck.ws.rs.spec.filter.lastvalue.JAXRSClientIT#writerContextOnClientTest
+ee.jakarta.tck.ws.rs.spec.filter.lastvalue.JAXRSClientIT#writerContextOnContainerTest
+ee.jakarta.tck.ws.rs.spec.filter.lastvalue.JAXRSClientIT#readerContextOnContainerTest
+ee.jakarta.tck.ws.rs.spec.provider.exceptionmapper.JAXRSClientIT#mappedExceptionTest
+ee.jakarta.tck.ws.rs.spec.provider.reader.JAXRSClientIT
+ee.jakarta.tck.ws.rs.spec.provider.standardhaspriority.JAXRSClientIT
+ee.jakarta.tck.ws.rs.spec.provider.standardnotnull.JAXRSClientIT
+ee.jakarta.tck.ws.rs.spec.provider.standardwithxmlbinding.JAXRSClientIT
+ee.jakarta.tck.ws.rs.spec.provider.visibility.JAXRSClientIT
+ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT
+ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsink.JAXRSClientIT
+ee.jakarta.tck.ws.rs.ee.rs.ext.providers.JAXRSProvidersClientIT#getSingletonsTest
+ee.jakarta.tck.ws.rs.ee.rs.ext.providers.JAXRSProvidersClientIT#getClassesTest
+ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getSingletonsTest
+ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getClassesTest
+ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getPropertiesTest
+ee.jakarta.tck.ws.rs.ee.rs.container.requestcontext.security.JAXRSClientIT
+
+# Tests that don't make sense in a MicroProfile Runtime
+
+# MicroProfile does not support Jakarta Security (only MP JWT)
+ee.jakarta.tck.ws.rs.ee.rs.core.securitycontext.basic.JAXRSBasicClientIT
+# MicroProfile does not support Servlets
+ee.jakarta.tck.ws.rs.ee.rs.container.requestcontext.JAXRSClientIT#setPropertyIsReflectedInServletRequestTest
+# Should not be required for EE mode
+ee.jakarta.tck.ws.rs.sebootstrap.SeBootstrapIT
+# Signature Tests - Don't worry about this yet
+ee.jakarta.tck.ws.rs.signaturetest.jaxrs.JAXRSSigTestIT

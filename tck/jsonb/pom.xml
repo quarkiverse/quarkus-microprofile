@@ -7,9 +7,9 @@
         <version>999-SNAPSHOT</version>
     </parent>
 
-    <artifactId>quarkus-microprofile-tck-fault-tolerance</artifactId>
+    <artifactId>quarkus-microprofile-tck-jsonb</artifactId>
 
-    <name>Quarkus - MicroProfile - TCK - Fault Tolerance</name>
+    <name>Quarkus - MicroProfile - TCK - JSON-B</name>
 
     <build>
         <plugins>
@@ -18,8 +18,14 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <dependenciesToScan>
-                        <dependency>org.eclipse.microprofile.fault-tolerance:microprofile-fault-tolerance-tck</dependency>
+                        <dependency>jakarta.json.bind:jakarta.json.bind-tck</dependency>
                     </dependenciesToScan>
+                    <excludes>
+                        <exclude>ee.jakarta.tck.json.bind.signaturetest.jsonb.JSONBSigTest</exclude>
+                        <!-- @BeforeAll requires to be public -->
+                        <exclude>ee.jakarta.tck.json.bind.cdi.customizedmapping.adapters.AdaptersCustomizationCDITest</exclude>
+                        <exclude>ee.jakarta.tck.json.bind.cdi.customizedmapping.serializers.SerializersCustomizationCDITest</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
@@ -32,9 +38,15 @@
         </dependency>
 
         <dependency>
-            <groupId>org.eclipse.microprofile.fault-tolerance</groupId>
-            <artifactId>microprofile-fault-tolerance-tck</artifactId>
-            <version>${microprofile.fault-tolerance.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.json.bind</groupId>
+            <artifactId>jakarta.json.bind-tck</artifactId>
+            <version>3.0.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
