@@ -12,7 +12,7 @@
   <packaging>pom</packaging>
   <name>Quarkus - MicroProfile - Parent</name>
   <properties>
-    <maven.version>3.9.2</maven.version>
+    <maven.version>3.9.3</maven.version>
     <wiremock.plugin.version>7.3.0</wiremock.plugin.version>
     <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
     <quarkus.version>3.0.0.Final</quarkus.version>
