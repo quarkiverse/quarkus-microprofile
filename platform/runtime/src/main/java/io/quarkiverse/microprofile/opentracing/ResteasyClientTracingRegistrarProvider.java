@@ -7,7 +7,6 @@ import jakarta.ws.rs.client.ClientBuilder;
 
 import org.eclipse.microprofile.context.ManagedExecutor;
 import org.eclipse.microprofile.opentracing.ClientTracingRegistrarProvider;
-import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 
 import io.opentracing.Tracer;
 import io.opentracing.contrib.concurrent.TracedExecutorService;
@@ -20,9 +19,8 @@ public class ResteasyClientTracingRegistrarProvider implements ClientTracingRegi
     }
 
     public ClientBuilder configure(ClientBuilder clientBuilder, ExecutorService executorService) {
-        ResteasyClientBuilder resteasyClientBuilder = (ResteasyClientBuilder) clientBuilder;
         Tracer tracer = CDI.current().select(Tracer.class).get();
-        return resteasyClientBuilder.executorService(new TracedExecutorService(executorService, tracer))
+        return clientBuilder.executorService(new TracedExecutorService(executorService, tracer))
                 .register(new SmallRyeClientTracingFeature(tracer));
     }
 }
