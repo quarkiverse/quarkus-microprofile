@@ -42,6 +42,10 @@
     </dependencies>
 
     <modules>
+        <module>cdi</module>
+        <module>rest</module>
+        <module>jsonp</module>
+        <module>jsonb</module>
         <module>config</module>
         <module>jwt</module>
         <module>health</module>

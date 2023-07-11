@@ -7,9 +7,9 @@
         <version>999-SNAPSHOT</version>
     </parent>
 
-    <artifactId>quarkus-microprofile-tck-fault-tolerance</artifactId>
+    <artifactId>quarkus-microprofile-tck-rest</artifactId>
 
-    <name>Quarkus - MicroProfile - TCK - Fault Tolerance</name>
+    <name>Quarkus - MicroProfile - TCK - REST</name>
 
     <build>
         <plugins>
@@ -17,9 +17,17 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
+                    <systemPropertyVariables>
+                        <webServerHost>localhost</webServerHost>
+                        <webServerPort>8081</webServerPort>
+                    </systemPropertyVariables>
                     <dependenciesToScan>
-                        <dependency>org.eclipse.microprofile.fault-tolerance:microprofile-fault-tolerance-tck</dependency>
+                        <dependency>jakarta.ws.rs:jakarta-restful-ws-tck</dependency>
                     </dependenciesToScan>
+                    <includes>
+                        <include>*IT</include>
+                    </includes>
+                    <excludesFile>exclusions.txt</excludesFile>
                 </configuration>
             </plugin>
         </plugins>
@@ -32,10 +40,17 @@
         </dependency>
 
         <dependency>
-            <groupId>org.eclipse.microprofile.fault-tolerance</groupId>
-            <artifactId>microprofile-fault-tolerance-tck</artifactId>
-            <version>${microprofile.fault-tolerance.version}</version>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta-restful-ws-tck</artifactId>
+            <version>3.1.3-1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>jakarta</id>
+            <url>https://jakarta.oss.sonatype.org/content/groups/staging/</url>
+        </repository>
+    </repositories>
 </project>
