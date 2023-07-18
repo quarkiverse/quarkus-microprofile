@@ -9,7 +9,6 @@ ee.jakarta.tck.ws.rs.servlet3.rs.applicationpath.JAXRSClientIT
 ee.jakarta.tck.ws.rs.ee.rs.container.responsecontext.JAXRSClientIT#setEntityStreamTest
 
 # ???
-ee.jakarta.tck.ws.rs.spec.client.exceptions.ClientExceptionsIT
 ee.jakarta.tck.ws.rs.spec.client.typedentities.JAXRSClientIT#clientAnyReaderUsageTest
 ee.jakarta.tck.ws.rs.spec.context.server.JAXRSClientIT
 ee.jakarta.tck.ws.rs.spec.contextprovider.JsonbContextProviderIT
