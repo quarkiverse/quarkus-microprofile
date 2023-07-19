@@ -8,7 +8,7 @@ ee.jakarta.tck.ws.rs.servlet3.rs.applicationpath.JAXRSClientIT
 # Hangs
 ee.jakarta.tck.ws.rs.ee.rs.container.responsecontext.JAXRSClientIT#setEntityStreamTest
 
-# ???
+# Requires https://github.com/resteasy/resteasy/pull/3712/
 ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT
 ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsink.JAXRSClientIT
 
