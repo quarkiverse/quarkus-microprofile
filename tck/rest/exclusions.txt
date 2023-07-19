@@ -9,23 +9,24 @@ ee.jakarta.tck.ws.rs.servlet3.rs.applicationpath.JAXRSClientIT
 ee.jakarta.tck.ws.rs.ee.rs.container.responsecontext.JAXRSClientIT#setEntityStreamTest
 
 # ???
+ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT
+ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsink.JAXRSClientIT
+ee.jakarta.tck.ws.rs.ee.rs.container.requestcontext.security.JAXRSClientIT
+
+# Requires https://github.com/quarkusio/quarkus/pull/34838
 ee.jakarta.tck.ws.rs.spec.client.typedentities.JAXRSClientIT#clientAnyReaderUsageTest
 ee.jakarta.tck.ws.rs.spec.context.server.JAXRSClientIT
-ee.jakarta.tck.ws.rs.spec.contextprovider.JsonbContextProviderIT
+ee.jakarta.tck.ws.rs.spec.provider.visibility.JAXRSClientIT
 ee.jakarta.tck.ws.rs.spec.filter.globalbinding.JAXRSClientIT#globalBoundResourceTest
 ee.jakarta.tck.ws.rs.spec.filter.lastvalue.JAXRSClientIT#writerContextOnClientTest
 ee.jakarta.tck.ws.rs.spec.filter.lastvalue.JAXRSClientIT#writerContextOnContainerTest
 ee.jakarta.tck.ws.rs.spec.filter.lastvalue.JAXRSClientIT#readerContextOnContainerTest
 ee.jakarta.tck.ws.rs.spec.provider.exceptionmapper.JAXRSClientIT#mappedExceptionTest
-ee.jakarta.tck.ws.rs.spec.provider.visibility.JAXRSClientIT
-ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT
-ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsink.JAXRSClientIT
 ee.jakarta.tck.ws.rs.ee.rs.ext.providers.JAXRSProvidersClientIT#getSingletonsTest
 ee.jakarta.tck.ws.rs.ee.rs.ext.providers.JAXRSProvidersClientIT#getClassesTest
 ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getSingletonsTest
 ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getClassesTest
 ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getPropertiesTest
-ee.jakarta.tck.ws.rs.ee.rs.container.requestcontext.security.JAXRSClientIT
 
 # Tests that don't make sense in a MicroProfile Runtime
 
