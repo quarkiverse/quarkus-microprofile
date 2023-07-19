@@ -32,6 +32,13 @@ public class ArquillianLifecycle {
             WebArchive war = (WebArchive) archive;
 
             Properties properties = new Properties();
+            properties.put("quarkus.http.auth.basic", "true");
+            properties.put("quarkus.security.users.embedded.enabled", "true");
+            properties.put("quarkus.security.users.embedded.plain-text", "true");
+            properties.put("quarkus.security.users.embedded.users.naruto", "uzumaki");
+            properties.put("quarkus.security.users.embedded.roles.naruto", "DIRECTOR");
+            properties.put("quarkus.security.users.embedded.users.sasuke", "uchiha");
+            properties.put("quarkus.security.users.embedded.roles.sasuke", "OTHERROLE");
             properties.put("quarkus.http.test-port", port + "");
             if (hasContext(testClass)) {
                 String name = war.getName();

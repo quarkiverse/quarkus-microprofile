@@ -11,7 +11,6 @@ ee.jakarta.tck.ws.rs.ee.rs.container.responsecontext.JAXRSClientIT#setEntityStre
 # ???
 ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT
 ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsink.JAXRSClientIT
-ee.jakarta.tck.ws.rs.ee.rs.container.requestcontext.security.JAXRSClientIT
 
 # Requires https://github.com/quarkusio/quarkus/pull/34838
 ee.jakarta.tck.ws.rs.spec.client.typedentities.JAXRSClientIT#clientAnyReaderUsageTest
@@ -30,8 +29,11 @@ ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getPropertiesTest
 
 # Tests that don't make sense in a MicroProfile Runtime
 
-# MicroProfile does not support Jakarta Security (only MP JWT)
-ee.jakarta.tck.ws.rs.ee.rs.core.securitycontext.basic.JAXRSBasicClientIT
+# Requires the Security Domain to be set, but this is done using web.xml, which is from the Servlet spec, not available in a MP environment
+# Also, we can argue that the full test should not be required, because MP does not define Basic Authentication
+ee.jakarta.tck.ws.rs.ee.rs.container.requestcontext.security.JAXRSClientIT#noSecurityTest
+ee.jakarta.tck.ws.rs.ee.rs.core.securitycontext.basic.JAXRSBasicClientIT#noAuthorizationTest
+
 # MicroProfile does not support Servlets
 ee.jakarta.tck.ws.rs.ee.rs.container.requestcontext.JAXRSClientIT#setPropertyIsReflectedInServletRequestTest
 # Should not be required for EE mode

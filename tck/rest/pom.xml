@@ -20,6 +20,10 @@
                     <systemPropertyVariables>
                         <webServerHost>localhost</webServerHost>
                         <webServerPort>8081</webServerPort>
+                        <user>naruto</user>
+                        <password>uzumaki</password>
+                        <authuser>sasuke</authuser>
+                        <authpassword>uchiha</authpassword>
                     </systemPropertyVariables>
                     <dependenciesToScan>
                         <dependency>jakarta.ws.rs:jakarta-restful-ws-tck</dependency>
