@@ -1,12 +1,12 @@
-# CDI Issues. When you have an Application class, the list classes are the only ones considered for the REST app. We shouldn't create CDI beans for other annotated resources.
-ee.jakarta.tck.ws.rs.spec.resource.locator.JAXRSClientIT
-ee.jakarta.tck.ws.rs.spec.resourceconstructor.JAXRSClientIT
-
 # Spec allows '%' in @ApplicationPath. Quarkus does not. Check UriNormalizationUtil.java:42)
 ee.jakarta.tck.ws.rs.servlet3.rs.applicationpath.JAXRSClientIT
 
 # Hangs
 ee.jakarta.tck.ws.rs.ee.rs.container.responsecontext.JAXRSClientIT#setEntityStreamTest
+
+# Requires https://github.com/quarkusio/quarkus/pull/34914
+ee.jakarta.tck.ws.rs.spec.resource.locator.JAXRSClientIT
+ee.jakarta.tck.ws.rs.spec.resourceconstructor.JAXRSClientIT
 
 # Requires https://github.com/resteasy/resteasy/pull/3712/
 ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT
