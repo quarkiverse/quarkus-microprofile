@@ -9,6 +9,7 @@ ee.jakarta.tck.ws.rs.spec.resource.locator.JAXRSClientIT
 ee.jakarta.tck.ws.rs.spec.resourceconstructor.JAXRSClientIT
 
 # Requires https://github.com/resteasy/resteasy/pull/3712/
+# Requires https://github.com/quarkusio/quarkus/pull/34925
 ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT
 ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsink.JAXRSClientIT
 
