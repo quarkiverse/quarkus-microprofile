@@ -44,6 +44,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-undertow</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
             <groupId>jakarta.ws.rs</groupId>
             <artifactId>jakarta-restful-ws-tck</artifactId>
             <version>3.1.3-1</version>

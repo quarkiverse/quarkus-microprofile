@@ -27,6 +27,9 @@ ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getSingletonsTest
 ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getClassesTest
 ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getPropertiesTest
 
+# Signature Tests - Don't worry about this yet
+ee.jakarta.tck.ws.rs.signaturetest.jaxrs.JAXRSSigTestIT
+
 # Tests that don't make sense in a MicroProfile Runtime
 
 # Requires the Security Domain to be set, but this is done using web.xml, which is from the Servlet spec, not available in a MP environment
@@ -36,7 +39,3 @@ ee.jakarta.tck.ws.rs.ee.rs.core.securitycontext.basic.JAXRSBasicClientIT#noAutho
 
 # MicroProfile does not support Servlets
 ee.jakarta.tck.ws.rs.ee.rs.container.requestcontext.JAXRSClientIT#setPropertyIsReflectedInServletRequestTest
-# Should not be required for EE mode
-ee.jakarta.tck.ws.rs.sebootstrap.SeBootstrapIT
-# Signature Tests - Don't worry about this yet
-ee.jakarta.tck.ws.rs.signaturetest.jaxrs.JAXRSSigTestIT
