@@ -1,8 +1,9 @@
-# Spec allows '%' in @ApplicationPath. Quarkus does not. Check UriNormalizationUtil.java:42)
-ee.jakarta.tck.ws.rs.servlet3.rs.applicationpath.JAXRSClientIT
-
-# Hangs
+# TCK Challenge
+# Requires https://github.com/jakartaee/rest/pull/1164
 ee.jakarta.tck.ws.rs.ee.rs.container.responsecontext.JAXRSClientIT#setEntityStreamTest
+
+# Requires https://github.com/quarkusio/quarkus/pull/34988
+ee.jakarta.tck.ws.rs.servlet3.rs.applicationpath.JAXRSClientIT
 
 # Requires https://github.com/quarkusio/quarkus/pull/34914
 ee.jakarta.tck.ws.rs.spec.resource.locator.JAXRSClientIT
