@@ -2,33 +2,8 @@
 # Requires https://github.com/jakartaee/rest/pull/1164
 ee.jakarta.tck.ws.rs.ee.rs.container.responsecontext.JAXRSClientIT#setEntityStreamTest
 
-# Requires https://github.com/quarkusio/quarkus/pull/34988
-ee.jakarta.tck.ws.rs.servlet3.rs.applicationpath.JAXRSClientIT
-
-# Requires https://github.com/quarkusio/quarkus/pull/34914
-ee.jakarta.tck.ws.rs.spec.resource.locator.JAXRSClientIT
-ee.jakarta.tck.ws.rs.spec.resourceconstructor.JAXRSClientIT
-
-# Requires https://github.com/resteasy/resteasy/pull/3712/
 # Requires https://github.com/resteasy/resteasy/pull/3722
-# Requires https://github.com/quarkusio/quarkus/pull/34925
 ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT
-ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsink.JAXRSClientIT
-
-# Requires https://github.com/quarkusio/quarkus/pull/34838
-ee.jakarta.tck.ws.rs.spec.client.typedentities.JAXRSClientIT#clientAnyReaderUsageTest
-ee.jakarta.tck.ws.rs.spec.context.server.JAXRSClientIT
-ee.jakarta.tck.ws.rs.spec.provider.visibility.JAXRSClientIT
-ee.jakarta.tck.ws.rs.spec.filter.globalbinding.JAXRSClientIT#globalBoundResourceTest
-ee.jakarta.tck.ws.rs.spec.filter.lastvalue.JAXRSClientIT#writerContextOnClientTest
-ee.jakarta.tck.ws.rs.spec.filter.lastvalue.JAXRSClientIT#writerContextOnContainerTest
-ee.jakarta.tck.ws.rs.spec.filter.lastvalue.JAXRSClientIT#readerContextOnContainerTest
-ee.jakarta.tck.ws.rs.spec.provider.exceptionmapper.JAXRSClientIT#mappedExceptionTest
-ee.jakarta.tck.ws.rs.ee.rs.ext.providers.JAXRSProvidersClientIT#getSingletonsTest
-ee.jakarta.tck.ws.rs.ee.rs.ext.providers.JAXRSProvidersClientIT#getClassesTest
-ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getSingletonsTest
-ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getClassesTest
-ee.jakarta.tck.ws.rs.ee.rs.core.application.JAXRSClientIT#getPropertiesTest
 
 # Signature Tests - Don't worry about this yet
 ee.jakarta.tck.ws.rs.signaturetest.jaxrs.JAXRSSigTestIT
