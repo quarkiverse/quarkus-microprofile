@@ -24,7 +24,7 @@
     <microprofile.openapi.version>3.0</microprofile.openapi.version>
     <microprofile.opentracing.version>3.0</microprofile.opentracing.version>
     <microprofile.rest-client.version>3.0.1</microprofile.rest-client.version>
-    <arquillian.version>1.7.0.Final</arquillian.version>
+    <arquillian.version>1.7.2.Final</arquillian.version>
   </properties>
   <scm>
     <connection>scm:git:git@github.com:quarkiverse/quarkus-microprofile.git</connection>
