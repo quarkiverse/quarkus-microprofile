@@ -43,7 +43,7 @@
         <dependency>
             <groupId>jakarta.json</groupId>
             <artifactId>jakarta.json-tck-tests</artifactId>
-            <version>2.1.1</version>
+            <version>${jakarta.jsonp.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
