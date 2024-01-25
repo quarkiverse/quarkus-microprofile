@@ -12,6 +12,28 @@
 
     <name>Quarkus - MicroProfile - TCK</name>
 
+    <properties>
+        <maven.version>3.9.6</maven.version>
+
+        <jakarta.cdi.version>4.0.12</jakarta.cdi.version>
+        <jakarta.rest.version>3.1.4</jakarta.rest.version>
+        <jakarta.jsonp.version>2.1.1</jakarta.jsonp.version>
+        <jakarta.jsonb.version>3.0.0</jakarta.jsonb.version>
+
+        <microprofile.config.version>3.0.2</microprofile.config.version>
+        <microprofile.jwt.version>2.0</microprofile.jwt.version>
+        <microprofile.health.version>4.0.1</microprofile.health.version>
+        <microprofile.fault-tolerance.version>4.0.2</microprofile.fault-tolerance.version>
+        <microprofile.metrics.version>4.0.1</microprofile.metrics.version>
+        <microprofile.openapi.version>3.0</microprofile.openapi.version>
+        <microprofile.opentracing.version>3.0</microprofile.opentracing.version>
+        <microprofile.rest-client.version>3.0.1</microprofile.rest-client.version>
+
+        <arquillian.version>1.8.0.Final</arquillian.version>
+        <wiremock.plugin.version>7.3.0</wiremock.plugin.version>
+        <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <!-- The Arquillian BOM overrides the Maven dependencies with 3.6.3, but Quarkus requires 3.8.1 -->

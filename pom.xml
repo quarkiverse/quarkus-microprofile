@@ -12,19 +12,7 @@
   <packaging>pom</packaging>
   <name>Quarkus - MicroProfile - Parent</name>
   <properties>
-    <maven.version>3.9.2</maven.version>
-    <wiremock.plugin.version>7.3.0</wiremock.plugin.version>
-    <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
-    <quarkus.version>3.4.1</quarkus.version>
-    <microprofile.config.version>3.0.2</microprofile.config.version>
-    <microprofile.jwt.version>2.0</microprofile.jwt.version>
-    <microprofile.health.version>4.0.1</microprofile.health.version>
-    <microprofile.fault-tolerance.version>4.0.2</microprofile.fault-tolerance.version>
-    <microprofile.metrics.version>4.0.1</microprofile.metrics.version>
-    <microprofile.openapi.version>3.0</microprofile.openapi.version>
-    <microprofile.opentracing.version>3.0</microprofile.opentracing.version>
-    <microprofile.rest-client.version>3.0.1</microprofile.rest-client.version>
-    <arquillian.version>1.7.0.Final</arquillian.version>
+    <quarkus.version>3.6.1</quarkus.version>
   </properties>
   <scm>
     <connection>scm:git:git@github.com:quarkiverse/quarkus-microprofile.git</connection>
