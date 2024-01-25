@@ -6,23 +6,28 @@
     <artifactId>quarkiverse-parent</artifactId>
     <version>15</version>
   </parent>
+
   <groupId>io.quarkiverse.microprofile</groupId>
   <artifactId>quarkus-microprofile-parent</artifactId>
   <version>999-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Quarkus - MicroProfile - Parent</name>
+
   <properties>
-    <quarkus.version>3.6.1</quarkus.version>
+    <quarkus.version>3.6.7</quarkus.version>
   </properties>
+
   <scm>
     <connection>scm:git:git@github.com:quarkiverse/quarkus-microprofile.git</connection>
     <developerConnection>scm:git:git@github.com:quarkiverse/quarkus-microprofile.git</developerConnection>
     <url>https://github.com/quarkiverse/quarkus-microprofile</url>
   </scm>
+
   <modules>
     <module>platform</module>
     <module>tck</module>
   </modules>
+
   <build>
     <pluginManagement>
       <plugins>
@@ -31,47 +36,24 @@
           <artifactId>quarkus-bootstrap-maven-plugin</artifactId>
           <version>${quarkus.version}</version>
         </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>${version.surefire.plugin}</version>
-          <configuration>
-            <reuseForks>false</reuseForks>
-            <systemPropertyVariables>
-              <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-            </systemPropertyVariables>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>${version.surefire.plugin}</version>
-          <configuration>
-            <aggregate>true</aggregate>
-            <title>Quarkus MicroProfile</title>
-            <outputName>tck-results</outputName>
-            <outputDirectory>${project.build.directory}</outputDirectory>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>uk.co.automatictester</groupId>
-          <artifactId>wiremock-maven-plugin</artifactId>
-          <version>${wiremock.plugin.version}</version>
-          <dependencies>
-            <!-- plugin defines "wiremock" artifactId (in provided scope), not the preferred "wiremock-jre8"
-                 which cannot be forced here, see https://issues.apache.org/jira/browse/MNG-6222 -->
-            <dependency>
-              <groupId>com.github.tomakehurst</groupId>
-              <artifactId>wiremock</artifactId>
-              <version>${wiremock.jre8.version}</version>
-            </dependency>
-          </dependencies>
-        </plugin>
       </plugins>
     </pluginManagement>
   </build>
+
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-smallrye-opentracing</artifactId>
+        <version>3.6.2</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-smallrye-opentracing-deployment</artifactId>
+        <version>3.6.2</version>
+      </dependency>
+
       <dependency>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-bom</artifactId>

@@ -14,8 +14,9 @@
 
     <properties>
         <maven.version>3.9.6</maven.version>
+        <version.dependency.plugin>3.6.1</version.dependency.plugin>
 
-        <jakarta.cdi.version>4.0.12</jakarta.cdi.version>
+        <jakarta.cdi.version>4.0.13</jakarta.cdi.version>
         <jakarta.rest.version>3.1.4</jakarta.rest.version>
         <jakarta.jsonp.version>2.1.1</jakarta.jsonp.version>
         <jakarta.jsonb.version>3.0.0</jakarta.jsonb.version>
@@ -33,6 +34,39 @@
         <wiremock.plugin.version>7.3.0</wiremock.plugin.version>
         <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
     </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${version.dependency.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${version.surefire.plugin}</version>
+                    <configuration>
+                        <reuseForks>false</reuseForks>
+                        <systemPropertyVariables>
+                            <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+                        </systemPropertyVariables>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-report-plugin</artifactId>
+                    <version>${version.surefire.plugin}</version>
+                    <configuration>
+                        <aggregate>true</aggregate>
+                        <outputName>tck-results</outputName>
+                        <outputDirectory>${project.build.directory}</outputDirectory>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
     <dependencyManagement>
         <dependencies>
