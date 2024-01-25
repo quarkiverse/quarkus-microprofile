@@ -69,6 +69,19 @@ jobs:
           git push
           git push origin ${{steps.metadata.outputs.current-version}}
 
+      - uses: radcortez/milestone-release-action@main
+        name: milestone release
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          milestone-title: ${{steps.metadata.outputs.current-version}}
+          milestone-next: ${{steps.metadata.outputs.next-version}}
+
+      - name: generate tck report
+        run: |
+          cd target/checkout
+          mvn surefire-report:report-only
+          mv target/tck-results.html $GITHUB_WORKSPACE
+
       - uses: meeDamian/github-release@2.0
         name: upload tck asset to release
         with:
