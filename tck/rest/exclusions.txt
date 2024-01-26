@@ -1,6 +1,6 @@
-# TCK Challenge
-# Requires https://github.com/jakartaee/rest/pull/1164
-ee.jakarta.tck.ws.rs.ee.rs.container.responsecontext.JAXRSClientIT#setEntityStreamTest
+# Using JUnit 5.10.1 makes tests without @Test annotation to be executed. This didn't happen before Quarkus 3.6.1 and all tests passed.
+ee.jakarta.tck.ws.rs.ee.rs.formparam.locator.JAXRSLocatorClientIT#formParamEntityWithEncodedTest
+ee.jakarta.tck.ws.rs.ee.rs.formparam.sub.JAXRSSubClientIT#formParamEntityWithEncodedTest
 
 # Requires https://github.com/resteasy/resteasy/pull/3722
 ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT
