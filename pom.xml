@@ -14,7 +14,7 @@
   <name>Quarkus - MicroProfile - Parent</name>
 
   <properties>
-    <quarkus.version>3.6.7</quarkus.version>
+    <quarkus.version>3.7.2</quarkus.version>
   </properties>
 
   <scm>
