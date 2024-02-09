@@ -70,7 +70,7 @@ jobs:
 
       - name: generate tck report
         run: |
-          cd target/checkout
+          cd target/checkout/tck
           mvn surefire-report:report-only
           mv target/tck-results.html $GITHUB_WORKSPACE
 
