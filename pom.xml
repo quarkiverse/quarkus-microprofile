@@ -44,18 +44,6 @@
     <dependencies>
       <dependency>
         <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-smallrye-opentracing</artifactId>
-        <version>3.6.2</version>
-      </dependency>
-
-      <dependency>
-        <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-smallrye-opentracing-deployment</artifactId>
-        <version>3.6.2</version>
-      </dependency>
-
-      <dependency>
-        <groupId>io.quarkus</groupId>
         <artifactId>quarkus-bom</artifactId>
         <version>${quarkus.version}</version>
         <type>pom</type>
