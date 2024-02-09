@@ -24,6 +24,13 @@
                         <password>uzumaki</password>
                         <authuser>sasuke</authuser>
                         <authpassword>uchiha</authpassword>
+                        <!--
+                            TODO - The OTel extensions creates a subclass for the resources due to the WithSpanInterceptor
+                            Certain TCK, call the resource .getClass and .getMethods to get annotations, but these
+                            are not available in the subclass. The TCK should be changed to call ResourceX.class instead
+                            of getClass locally-
+                        -->
+                        <quarkus.otel.enabled>false</quarkus.otel.enabled>
                     </systemPropertyVariables>
                     <dependenciesToScan>
                         <dependency>jakarta.ws.rs:jakarta-restful-ws-tck</dependency>

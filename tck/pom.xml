@@ -27,8 +27,8 @@
         <microprofile.fault-tolerance.version>4.0.2</microprofile.fault-tolerance.version>
         <microprofile.metrics.version>4.0.1</microprofile.metrics.version>
         <microprofile.openapi.version>3.0</microprofile.openapi.version>
-        <microprofile.opentracing.version>3.0</microprofile.opentracing.version>
         <microprofile.rest-client.version>3.0.1</microprofile.rest-client.version>
+        <microprofile.telemetry.version>1.1</microprofile.telemetry.version>
 
         <arquillian.version>1.8.0.Final</arquillian.version>
         <wiremock.plugin.version>7.3.0</wiremock.plugin.version>
@@ -108,8 +108,8 @@
         <module>fault-tolerance</module>
         <module>metrics</module>
         <module>openapi</module>
-        <module>opentracing</module>
         <module>rest-client</module>
+        <module>telemetry</module>
     </modules>
 
 </project>
