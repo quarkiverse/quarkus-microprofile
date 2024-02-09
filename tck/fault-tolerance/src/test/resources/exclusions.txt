@@ -1,0 +1,11 @@
+# Metrics Tests using the old MP Metrics that we don't support anymore
+org.eclipse.microprofile.fault.tolerance.tck.metrics.*
+org.eclipse.microprofile.fault.tolerance.tck.metrics.AllMetricsTest
+org.eclipse.microprofile.fault.tolerance.tck.metrics.BulkheadMetricTest
+org.eclipse.microprofile.fault.tolerance.tck.metrics.CircuitBreakerMetricTest
+org.eclipse.microprofile.fault.tolerance.tck.metrics.ClashingNameTest
+org.eclipse.microprofile.fault.tolerance.tck.metrics.ClassLevelMetricTest
+org.eclipse.microprofile.fault.tolerance.tck.metrics.FallbackMetricTest
+org.eclipse.microprofile.fault.tolerance.tck.metrics.MetricsDisabledTest
+org.eclipse.microprofile.fault.tolerance.tck.metrics.RetryMetricTest
+org.eclipse.microprofile.fault.tolerance.tck.metrics.TimeoutMetricTest

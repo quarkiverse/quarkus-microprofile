@@ -20,6 +20,9 @@
                     <dependenciesToScan>
                         <dependency>jakarta.json.bind:jakarta.json.bind-tck</dependency>
                     </dependenciesToScan>
+                    <systemPropertyVariables>
+                        <java.locale.providers>COMPAT</java.locale.providers>
+                    </systemPropertyVariables>
                     <excludes>
                         <exclude>ee.jakarta.tck.json.bind.signaturetest.jsonb.JSONBSigTest</exclude>
                         <!-- @BeforeAll requires to be public -->

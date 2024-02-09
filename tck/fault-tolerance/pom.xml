@@ -20,6 +20,7 @@
                     <dependenciesToScan>
                         <dependency>org.eclipse.microprofile.fault-tolerance:microprofile-fault-tolerance-tck</dependency>
                     </dependenciesToScan>
+                    <excludesFile>src/test/resources/exclusions.txt</excludesFile>
                 </configuration>
             </plugin>
         </plugins>
