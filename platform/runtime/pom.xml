@@ -9,7 +9,6 @@
 
     <artifactId>quarkus-microprofile</artifactId>
     <name>Quarkus - MicroProfile Platform - Runtime</name>
-    <description>Quarkus MicroProfile 4.1 Compatible Implementation</description>
 
     <dependencies>
         <dependency>
