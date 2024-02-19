@@ -11,6 +11,7 @@
   <packaging>pom</packaging>
   <artifactId>quarkus-microprofile-platform-parent</artifactId>
   <name>Quarkus - MicroProfile Platform</name>
+  <description>The Quarkus MicroProfile Extension bundles all MicroProfile specifications and SmallRye implementations into a single extension dependency for easy consumption.</description>
 
   <modules>
     <module>runtime</module>
