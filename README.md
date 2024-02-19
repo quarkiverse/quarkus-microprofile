@@ -23,9 +23,9 @@ To use the extension, add the dependency to the target project:
 
 ## Older MicroProfile Versions
 
-| MP Version | Extension Version | Quarkus Version | Java Version |
-|------------|-------------------|-----------------|--------------|
-| 4.1        | 2.7.2.Final       | 2.7.2.Final     | 11           |
-| 5.0        | 3.0.0.Final       | 3.0.0.Final     | 11           |
-| 6.1        | 3.1.0             | 3.6.7           | 11           |
-| 6.1        | 3.2.0             | 3.7.2           | 17           |
+| MP Version                                     | Extension Version | Quarkus Version | Java Version | Compatible Certification Request                                         |
+|------------------------------------------------|-------------------|-----------------|--------------|--------------------------------------------------------------------------|
+| [4.1](https://microprofile.io/compatible/4-1/) | 2.7.2.Final       | 2.7.2.Final     | 11           | [:white_check_mark:](https://github.com/eclipse/microprofile/issues/247) |
+| [5.0](https://microprofile.io/compatible/5-0/) | 3.0.0.Final       | 3.0.0.Final     | 11           | [:white_check_mark:](https://github.com/eclipse/microprofile/issues/315) |
+| [6.1](https://microprofile.io/compatible/6-1/) | 3.1.0             | 3.6.7           | 11           | :hourglass_flowing_sand:                                                 |
+| [6.1](https://microprofile.io/compatible/6-1/) | 3.2.0             | 3.7.2           | 17           | :hourglass_flowing_sand:                                                 |
