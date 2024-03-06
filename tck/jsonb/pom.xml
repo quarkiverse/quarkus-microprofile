@@ -24,8 +24,9 @@
                         <java.locale.providers>COMPAT</java.locale.providers>
                     </systemPropertyVariables>
                     <excludes>
+                        <!-- Signature Tests are not required for MP -->
                         <exclude>ee.jakarta.tck.json.bind.signaturetest.jsonb.JSONBSigTest</exclude>
-                        <!-- @BeforeAll requires to be public -->
+                        <!-- CDI Lite implementations are not required to provide support for CDI in Java SE - See jakarta.enterprise.inject.se.SeContainerInitializer -->
                         <exclude>ee.jakarta.tck.json.bind.cdi.customizedmapping.adapters.AdaptersCustomizationCDITest</exclude>
                         <exclude>ee.jakarta.tck.json.bind.cdi.customizedmapping.serializers.SerializersCustomizationCDITest</exclude>
                     </excludes>
@@ -49,7 +50,7 @@
         <dependency>
             <groupId>jakarta.json.bind</groupId>
             <artifactId>jakarta.json.bind-tck</artifactId>
-            <version>${jakarta.jsonb.version}</version>
+            <version>3.0.0-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

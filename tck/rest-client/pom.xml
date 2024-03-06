@@ -25,7 +25,9 @@
                         <dependency>org.eclipse.microprofile.rest.client:microprofile-rest-client-tck</dependency>
                     </dependenciesToScan>
                     <excludes>
+                        <!-- @ConversationScoped is not part of MP -->
                         <exclude>org.eclipse.microprofile.rest.client.tck.cditests.HasConversationScopeTest</exclude>
+                        <!-- @SessionScoped requires Servlet which is not available in MP -->
                         <exclude>org.eclipse.microprofile.rest.client.tck.cditests.HasSessionScopeTest</exclude>
                     </excludes>
                 </configuration>

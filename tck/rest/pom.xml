@@ -38,6 +38,7 @@
                     <includes>
                         <include>*IT</include>
                     </includes>
+                    <!-- We use an exclusion file because excludes paramater does not accept method filtering -->
                     <excludesFile>exclusions.txt</excludesFile>
                 </configuration>
             </plugin>
