@@ -20,7 +20,18 @@
                     <dependenciesToScan>
                         <dependency>org.eclipse.microprofile.fault-tolerance:microprofile-fault-tolerance-tck</dependency>
                     </dependenciesToScan>
-                    <excludesFile>src/test/resources/exclusions.txt</excludesFile>
+                    <excludes>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.*</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.AllMetricsTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.BulkheadMetricTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.CircuitBreakerMetricTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.ClashingNameTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.ClassLevelMetricTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.FallbackMetricTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.MetricsDisabledTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.RetryMetricTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.TimeoutMetricTest</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>

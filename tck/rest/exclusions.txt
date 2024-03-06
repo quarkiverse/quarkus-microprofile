@@ -1,14 +1,5 @@
-# Using JUnit 5.10.1 makes tests without @Test annotation to be executed. This didn't happen before Quarkus 3.6.1 and all tests passed.
-ee.jakarta.tck.ws.rs.ee.rs.formparam.locator.JAXRSLocatorClientIT#formParamEntityWithEncodedTest
-ee.jakarta.tck.ws.rs.ee.rs.formparam.sub.JAXRSSubClientIT#formParamEntityWithEncodedTest
-
-# Requires https://github.com/resteasy/resteasy/pull/3722
-ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT
-
-# Signature Tests - Don't worry about this yet
+# Signature Tests are not required for MP
 ee.jakarta.tck.ws.rs.signaturetest.jaxrs.JAXRSSigTestIT
-
-# Tests that don't make sense in a MicroProfile Runtime
 
 # Requires the Security Domain to be set, but this is done using web.xml, which is from the Servlet spec, not available in a MP environment
 # Also, we can argue that the full test should not be required, because MP does not define Basic Authentication
@@ -17,3 +8,10 @@ ee.jakarta.tck.ws.rs.ee.rs.core.securitycontext.basic.JAXRSBasicClientIT#noAutho
 
 # MicroProfile does not support Servlets
 ee.jakarta.tck.ws.rs.ee.rs.container.requestcontext.JAXRSClientIT#setPropertyIsReflectedInServletRequestTest
+
+# Using JUnit 5.10.1 makes tests without @Test annotation to be executed. This didn't happen before Quarkus 3.6.1 and all tests passed.
+ee.jakarta.tck.ws.rs.ee.rs.formparam.locator.JAXRSLocatorClientIT#formParamEntityWithEncodedTest
+ee.jakarta.tck.ws.rs.ee.rs.formparam.sub.JAXRSSubClientIT#formParamEntityWithEncodedTest
+
+# Requires https://github.com/resteasy/resteasy/pull/3722
+ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT

@@ -21,6 +21,7 @@
                         <dependency>jakarta.json:jakarta.json-tck-tests</dependency>
                     </dependenciesToScan>
                     <excludes>
+                        <!-- Signature Tests are not required for MP -->
                         <exclude>ee.jakarta.tck.jsonp.signaturetest.jsonp.JSONPSigTest</exclude>
                     </excludes>
                 </configuration>

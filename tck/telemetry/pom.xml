@@ -24,7 +24,14 @@
                     <dependenciesToScan>
                         <dependency>org.eclipse.microprofile.telemetry.tracing:microprofile-telemetry-tracing-tck</dependency>
                     </dependenciesToScan>
-                    <excludesFile>src/test/resources/exclusions.txt</excludesFile>
+                    <excludes>
+                        <!-- Optional Tests -->
+                        <exclude>org.eclipse.microprofile.telemetry.tracing.tck.rest.JaegerPropagationTest</exclude>
+                        <exclude>org.eclipse.microprofile.telemetry.tracing.tck.rest.B3MultiPropagationTest</exclude>
+                        <exclude>org.eclipse.microprofile.telemetry.tracing.tck.rest.B3PropagationTest</exclude>
+                        <!-- Requires Jakarta Concurrency which is not part of MP -->
+                        <exclude>org.eclipse.microprofile.telemetry.tracing.tck.async.JaxRsServerAsyncTest</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
