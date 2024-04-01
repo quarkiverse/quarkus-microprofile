@@ -15,11 +15,11 @@ To use the extension, add the dependency to the target project:
 <dependency>
     <groupId>io.quarkiverse.microprofile</groupId>
     <artifactId>quarkus-microprofile</artifactId>
-    <version>3.2.0</version>
+    <version>3.3.0</version>
 </dependency>
 ```
 
-:information_source: **Recommended Quarkus version: `3.7.2` or higher**
+:information_source: **Recommended Quarkus version: `3.9.0` or higher**
 
 ## Older MicroProfile Versions
 
@@ -29,3 +29,4 @@ To use the extension, add the dependency to the target project:
 | [5.0](https://microprofile.io/compatible/5-0/) | 3.0.0.Final       | 3.0.0.Final     | 11           | [:white_check_mark:](https://github.com/eclipse/microprofile/issues/315) |
 | [6.1](https://microprofile.io/compatible/6-1/) | 3.1.0             | 3.6.7           | 11           | :hourglass_flowing_sand:                                                 |
 | [6.1](https://microprofile.io/compatible/6-1/) | 3.2.0             | 3.7.2           | 17           | :hourglass_flowing_sand:                                                 |
+| [6.1](https://microprofile.io/compatible/6-1/) | 3.3.0             | 3.9.0           | 17           | :hourglass_flowing_sand:                                                 |
