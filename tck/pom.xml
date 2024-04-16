@@ -16,7 +16,7 @@
         <maven.version>3.9.6</maven.version>
         <version.dependency.plugin>3.6.1</version.dependency.plugin>
 
-        <jakarta.cdi.version>4.0.13</jakarta.cdi.version>
+        <jakarta.cdi.version>4.1.0</jakarta.cdi.version>
         <jakarta.rest.version>3.1.4</jakarta.rest.version>
         <jakarta.jsonp.version>2.1.1</jakarta.jsonp.version>
         <jakarta.jsonb.version>3.0.0</jakarta.jsonb.version>
