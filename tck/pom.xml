@@ -13,7 +13,7 @@
     <name>Quarkus - MicroProfile - TCK</name>
 
     <properties>
-        <maven.version>3.9.6</maven.version>
+        <maven.version>3.9.7</maven.version>
         <version.dependency.plugin>3.6.1</version.dependency.plugin>
 
         <jakarta.cdi.version>4.1.0</jakarta.cdi.version>
