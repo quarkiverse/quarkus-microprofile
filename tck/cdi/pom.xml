@@ -36,11 +36,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <systemPropertyVariables>
-                        <org.jboss.cdi.tck.cdiLiteMode>true</org.jboss.cdi.tck.cdiLiteMode>
+                        <org.jboss.cdi.tck.cdiCoreMode>true</org.jboss.cdi.tck.cdiCoreMode>
                         <org.jboss.cdi.tck.libraryDirectory>${project.build.directory}/porting-pkg</org.jboss.cdi.tck.libraryDirectory>
                         <quarkus.arc.remove-unused-beans>false</quarkus.arc.remove-unused-beans>
                         <quarkus.arc.strict-compatibility>true</quarkus.arc.strict-compatibility>
                         <quarkus.arc.transform-unproxyable-classes>false</quarkus.arc.transform-unproxyable-classes>
+                        <quarkus.arc.optimize-contexts>false</quarkus.arc.optimize-contexts>
                     </systemPropertyVariables>
                     <dependenciesToScan>
                         <dependency>jakarta.enterprise:cdi-tck-core-impl</dependency>
@@ -55,7 +56,6 @@
     </build>
 
     <dependencies>
-        <!-- TODO - radcortez - Check jakarta.enterprise.inject.spi.DeploymentException: Normal scoped beans must declare a non-private constructor with no parameters: SYNTHETIC bean [types=[org.eclipse.microprofile.context.ManagedExecutor, java.lang.Object, io.smallrye.context.SmallRyeManagedExecutor], qualifiers=[@Default, @Any], target=n/a] -->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-arc</artifactId>
