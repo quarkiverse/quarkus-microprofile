@@ -30,7 +30,7 @@
         <microprofile.rest-client.version>3.0.1</microprofile.rest-client.version>
         <microprofile.telemetry.version>1.1</microprofile.telemetry.version>
 
-        <arquillian.version>1.8.0.Final</arquillian.version>
+        <arquillian.version>1.8.1.Final</arquillian.version>
         <wiremock.plugin.version>7.3.0</wiremock.plugin.version>
         <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
     </properties>
