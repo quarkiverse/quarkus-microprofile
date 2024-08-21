@@ -27,7 +27,7 @@
         <microprofile.fault-tolerance.version>4.0.2</microprofile.fault-tolerance.version>
         <microprofile.metrics.version>4.0.1</microprofile.metrics.version>
         <microprofile.openapi.version>3.0</microprofile.openapi.version>
-        <microprofile.rest-client.version>3.0.1</microprofile.rest-client.version>
+        <microprofile.rest-client.version>4.0</microprofile.rest-client.version>
         <microprofile.telemetry.version>1.1</microprofile.telemetry.version>
 
         <arquillian.version>1.8.0.Final</arquillian.version>
