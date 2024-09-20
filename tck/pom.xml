@@ -26,7 +26,7 @@
         <microprofile.health.version>4.0.1</microprofile.health.version>
         <microprofile.fault-tolerance.version>4.0.2</microprofile.fault-tolerance.version>
         <microprofile.metrics.version>4.0.1</microprofile.metrics.version>
-        <microprofile.openapi.version>3.0</microprofile.openapi.version>
+        <microprofile.openapi.version>4.0.1</microprofile.openapi.version>
         <microprofile.rest-client.version>3.0.1</microprofile.rest-client.version>
         <microprofile.telemetry.version>1.1</microprofile.telemetry.version>
 
