@@ -21,16 +21,16 @@
                         <dependency>org.eclipse.microprofile.fault-tolerance:microprofile-fault-tolerance-tck</dependency>
                     </dependenciesToScan>
                     <excludes>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.*</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.AllMetricsTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.BulkheadMetricTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.CircuitBreakerMetricTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.ClashingNameTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.ClassLevelMetricTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.FallbackMetricTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.MetricsDisabledTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.RetryMetricTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.TimeoutMetricTest</exclude>
+                        <!-- Quarkus doesn't implement OpenTelemetry Metrics yet -->
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.AllAnnotationTelemetryTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.BulkheadTelemetryTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.CircuitBreakerTelemetryTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.ClashingNameTelemetryTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.ClassLevelTelemetryTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.FallbackTelemetryTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.FaultToleranceDisabledTelemetryTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.RetryTelemetryTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.TimeoutTelemetryTest</exclude>
                     </excludes>
                 </configuration>
             </plugin>

@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/github/license/quarkiverse/quarkiverse-jberet.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Central](https://img.shields.io/maven-central/v/io.quarkiverse.microprofile/quarkus-microprofile-parent?color=green)](https://search.maven.org/search?q=a:quarkus-microprofile-parent)
 
-The Quarkus MicroProfile Extension bundles all [MicroProfile](https://microprofile.io) 6.1 specifications and 
+The Quarkus MicroProfile Extension bundles all [MicroProfile](https://microprofile.io) 7.0 specifications and 
 [SmallRye](https://smallrye.io) implementations into a single extension dependency for easy consumption.
 
 ## Usage
@@ -15,11 +15,11 @@ To use the extension, add the dependency to the target project:
 <dependency>
     <groupId>io.quarkiverse.microprofile</groupId>
     <artifactId>quarkus-microprofile</artifactId>
-    <version>3.3.0</version>
+    <version>3.4.0</version>
 </dependency>
 ```
 
-:information_source: **Recommended Quarkus version: `3.9.0` or higher**
+:information_source: **Recommended Quarkus version: `3.17.0` or higher**
 
 ## Older MicroProfile Versions
 
@@ -30,3 +30,4 @@ To use the extension, add the dependency to the target project:
 | [6.1](https://microprofile.io/compatible/6-1/) | 3.1.0             | 3.6.7           | 11           | :hourglass_flowing_sand:                                                 |
 | [6.1](https://microprofile.io/compatible/6-1/) | 3.2.0             | 3.7.2           | 17           | :hourglass_flowing_sand:                                                 |
 | [6.1](https://microprofile.io/compatible/6-1/) | 3.3.0             | 3.9.0           | 17           | :hourglass_flowing_sand:                                                 |
+| [7.0](https://microprofile.io/compatible/7-0/) | 3.4.0             | 3.17.0          | 17           | :hourglass_flowing_sand:                                                 |
