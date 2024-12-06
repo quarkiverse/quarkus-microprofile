@@ -1,4 +1,4 @@
-name: Quarkiverse Perform Release
+name: Quarkiverse Release
 run-name: Perform ${{github.event.inputs.tag || github.ref_name}} Release
 on:
   push:
@@ -13,7 +13,7 @@ on:
 permissions:
   attestations: write
   id-token: write
-  contents: read
+  contents: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -23,6 +23,13 @@ jobs:
   perform-release:
     name: Perform Release
     uses: quarkiverse/.github/.github/workflows/perform-release.yml@main
+    secrets: inherit
+    with:
+      version: ${{github.event.inputs.tag || github.ref_name}}
+
+  publish-tck:
+    name: Publish TCK Report
+    uses: ./.github/workflows/publish-tck.yml
     secrets: inherit
     with:
       version: ${{github.event.inputs.tag || github.ref_name}}
