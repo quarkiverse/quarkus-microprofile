@@ -4,7 +4,7 @@
     <parent>
         <groupId>io.quarkiverse.microprofile</groupId>
         <artifactId>quarkus-microprofile-tck</artifactId>
-        <version>999-SNAPSHOT</version>
+        <version>3.4.0</version>
     </parent>
 
     <artifactId>quarkus-microprofile-tck-jwt</artifactId>
