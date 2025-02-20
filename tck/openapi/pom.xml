@@ -19,6 +19,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <test.url>http://localhost:8081</test.url>
+                        <quarkus.smallrye-openapi.auto-add-bad-request-response>false</quarkus.smallrye-openapi.auto-add-bad-request-response>
                     </systemPropertyVariables>
                     <dependenciesToScan>
                         <dependency>org.eclipse.microprofile.openapi:microprofile-openapi-tck</dependency>
