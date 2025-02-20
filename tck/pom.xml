@@ -100,6 +100,7 @@
     </dependencies>
 
     <modules>
+        <module>inject</module>
         <module>cdi</module>
         <module>rest</module>
         <module>jsonp</module>

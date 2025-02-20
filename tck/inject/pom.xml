@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.quarkiverse.microprofile</groupId>
+        <artifactId>quarkus-microprofile-tck</artifactId>
+        <version>999-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>quarkus-microprofile-tck-inject</artifactId>
+
+    <name>Quarkus - MicroProfile - TCK - Inject</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <systemPropertyVariables>
+                        <quarkus.arc.remove-unused-beans>false</quarkus.arc.remove-unused-beans>
+                        <quarkus.arc.strict-compatibility>true</quarkus.arc.strict-compatibility>
+                        <quarkus.arc.transform-unproxyable-classes>false</quarkus.arc.transform-unproxyable-classes>
+                        <quarkus.index-dependency.tck.group-id>jakarta.inject</quarkus.index-dependency.tck.group-id>
+                        <quarkus.index-dependency.tck.artifact-id>jakarta.inject-tck</quarkus.index-dependency.tck.artifact-id>
+                    </systemPropertyVariables>
+                    <reuseForks>false</reuseForks>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-arc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-arquillian</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.arquillian.junit5</groupId>
+            <artifactId>arquillian-junit5-container</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.inject</groupId>
+            <artifactId>jakarta.inject-tck</artifactId>
+            <version>${jakarta.inject.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
