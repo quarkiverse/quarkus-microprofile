@@ -21,6 +21,15 @@
                         <dependency>org.eclipse.microprofile.fault-tolerance:microprofile-fault-tolerance-tck</dependency>
                     </dependenciesToScan>
                     <excludes>
+                        <!-- MP Metrics is not required -->
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.BulkheadMetricTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.CircuitBreakerMetricTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.ClashingNameTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.ClassLevelMetricTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.FallbackMetricTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.MetricsDisabledTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.RetryMetricTest</exclude>
+                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.TimeoutMetricTest</exclude>
                         <!-- Quarkus doesn't implement OpenTelemetry Metrics yet -->
                         <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.AllAnnotationTelemetryTest</exclude>
                         <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.BulkheadTelemetryTest</exclude>
