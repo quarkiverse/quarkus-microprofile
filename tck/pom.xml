@@ -16,6 +16,7 @@
         <maven.version>3.9.9</maven.version>
         <version.dependency.plugin>3.8.1</version.dependency.plugin>
 
+        <jakarta.core.version>10.0.4</jakarta.core.version>
         <jakarta.cdi.version>4.1.0</jakarta.cdi.version>
         <jakarta.rest.version>3.1.5</jakarta.rest.version>
         <jakarta.jsonp.version>2.1.1</jakarta.jsonp.version>
@@ -105,6 +106,7 @@
         <module>rest</module>
         <module>jsonp</module>
         <module>jsonb</module>
+        <module>core</module>
         <module>config</module>
         <module>jwt</module>
         <module>health</module>
