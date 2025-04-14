@@ -28,7 +28,7 @@
         <microprofile.config.version>3.1</microprofile.config.version>
         <microprofile.jwt.version>2.1</microprofile.jwt.version>
         <microprofile.health.version>4.0.1</microprofile.health.version>
-        <microprofile.fault-tolerance.version>4.1.1</microprofile.fault-tolerance.version>
+        <microprofile.fault-tolerance.version>4.1.2</microprofile.fault-tolerance.version>
         <microprofile.openapi.version>4.0.2</microprofile.openapi.version>
         <microprofile.rest-client.version>4.0</microprofile.rest-client.version>
         <microprofile.telemetry.version>2.0.1</microprofile.telemetry.version>
