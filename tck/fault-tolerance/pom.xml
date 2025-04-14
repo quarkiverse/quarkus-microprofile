@@ -30,16 +30,6 @@
                         <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.MetricsDisabledTest</exclude>
                         <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.RetryMetricTest</exclude>
                         <exclude>org.eclipse.microprofile.fault.tolerance.tck.metrics.TimeoutMetricTest</exclude>
-                        <!-- Quarkus doesn't implement OpenTelemetry Metrics yet -->
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.AllAnnotationTelemetryTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.BulkheadTelemetryTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.CircuitBreakerTelemetryTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.ClashingNameTelemetryTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.ClassLevelTelemetryTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.FallbackTelemetryTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.FaultToleranceDisabledTelemetryTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.RetryTelemetryTest</exclude>
-                        <exclude>org.eclipse.microprofile.fault.tolerance.tck.telemetryMetrics.TimeoutTelemetryTest</exclude>
                     </excludes>
                 </configuration>
             </plugin>
