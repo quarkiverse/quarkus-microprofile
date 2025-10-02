@@ -14,7 +14,7 @@
 
     <properties>
         <maven.version>3.9.11</maven.version>
-        <version.dependency.plugin>3.8.1</version.dependency.plugin>
+        <version.dependency.plugin>3.9.0</version.dependency.plugin>
 
         <jakarta.core.version>10.0.4</jakarta.core.version>
         <jakarta.cdi.version>4.1.0</jakarta.cdi.version>
