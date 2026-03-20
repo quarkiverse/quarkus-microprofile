@@ -51,7 +51,7 @@
                             <skip>false</skip>
                             <reportsDirectory>${project.build.directory}/surefire-reports-metrics</reportsDirectory>
                             <systemPropertyVariables>
-                                <quarkus.otel.metric.export.interval>1000</quarkus.otel.metric.export.interval>
+                                <quarkus.otel.metric.export.interval>1</quarkus.otel.metric.export.interval>
                             </systemPropertyVariables>
                             <dependenciesToScan>
                                 <dependency>org.eclipse.microprofile.telemetry:microprofile-telemetry-metrics-tck</dependency>
@@ -72,7 +72,7 @@
                             <systemPropertyVariables>
                                 <quarkus.otel.sdk.disabled>false</quarkus.otel.sdk.disabled>
                                 <quarkus.otel.metrics.exporter>logging</quarkus.otel.metrics.exporter>
-                                <quarkus.otel.metric.export.interval>1000</quarkus.otel.metric.export.interval>
+                                <quarkus.otel.metric.export.interval>1</quarkus.otel.metric.export.interval>
                                 <quarkus.log.file.enable>true</quarkus.log.file.enable>
                                 <quarkus.log.file.path>${project.build.directory}/out.log</quarkus.log.file.path>
                                 <mptelemetry.tck.log.file.path>${project.build.directory}/out.log</mptelemetry.tck.log.file.path>
