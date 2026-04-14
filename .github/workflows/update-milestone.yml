@@ -4,6 +4,10 @@ on:
   pull_request_target:
     types: [closed]
 
+permissions:
+  pull-requests: write
+  issues: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
