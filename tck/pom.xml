@@ -20,7 +20,7 @@
         <jakarta.cdi.version>4.1.0</jakarta.cdi.version>
         <jakarta.rest.version>3.1.5</jakarta.rest.version>
         <jakarta.jsonp.version>2.1.1</jakarta.jsonp.version>
-        <jakarta.jsonb.version>3.0.0</jakarta.jsonb.version>
+        <jakarta.jsonb.version>3.0.2</jakarta.jsonb.version>
         <jakarta.annotation.version>2.1.1</jakarta.annotation.version>
         <jakarta.inject.version>2.0.1</jakarta.inject.version>
         <jakarta.interceptors.version>2.2.0</jakarta.interceptors.version>
