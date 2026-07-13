@@ -1,0 +1,6 @@
+# Enforce LF line endings for source files to avoid formatter validation failures on Windows
+*.java text eol=lf
+*.xml text eol=lf
+*.properties text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
