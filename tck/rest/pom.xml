@@ -62,6 +62,14 @@
             <artifactId>jakarta-restful-ws-tck</artifactId>
             <version>${jakarta.rest.version}</version>
             <scope>test</scope>
+            <!-- sigtest-maven-plugin pulls ct.sym (JDK compile-time symbols) onto the classpath via a
+                 system-scoped dependency, causing an OOM in Quarkus ReadOnlyZipFileSystem during augmentation -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.netbeans.tools</groupId>
+                    <artifactId>sigtest-maven-plugin</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 </project>
