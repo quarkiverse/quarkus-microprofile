@@ -8,6 +8,3 @@ ee.jakarta.tck.ws.rs.ee.rs.core.securitycontext.basic.JAXRSBasicClientIT#noAutho
 
 # MicroProfile does not support Servlets
 ee.jakarta.tck.ws.rs.ee.rs.container.requestcontext.JAXRSClientIT#setPropertyIsReflectedInServletRequestTest
-
-# Requires https://github.com/resteasy/resteasy/pull/3722
-ee.jakarta.tck.ws.rs.jaxrs21.ee.sse.sseeventsource.JAXRSClientIT#connectionLostFor1500msTest
