@@ -35,7 +35,7 @@
 
         <arquillian.version>1.8.0.Final</arquillian.version>
         <wiremock.plugin.version>7.3.0</wiremock.plugin.version>
-        <wiremock.jre8.version>2.27.2</wiremock.jre8.version>
+        <wiremock.jre8.version>3.0.1</wiremock.jre8.version>
     </properties>
 
     <build>
