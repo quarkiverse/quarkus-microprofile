@@ -24,12 +24,53 @@ on:
 
 jobs:
   build:
-    runs-on: ${{matrix.os}}
+    runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        os: [ubuntu-latest]
         java: [17, 21]
-    name: build with jdk ${{matrix.java}} on ${{matrix.os}}
+        tck-module:
+          - inject
+          - cdi
+          - rest
+          - jsonp
+          - jsonb
+          - core
+          - config
+          - jwt
+          - health
+          - fault-tolerance
+          - openapi
+          - rest-client
+          - telemetry
+        include:
+          - tck-module: inject
+            tck-name: Jakarta Inject
+          - tck-module: cdi
+            tck-name: Jakarta CDI
+          - tck-module: rest
+            tck-name: Jakarta REST
+          - tck-module: jsonp
+            tck-name: Jakarta JSON-P
+          - tck-module: jsonb
+            tck-name: Jakarta JSON-B
+          - tck-module: core
+            tck-name: Jakarta Core
+          - tck-module: config
+            tck-name: MicroProfile Config
+          - tck-module: jwt
+            tck-name: MicroProfile JWT
+          - tck-module: health
+            tck-name: MicroProfile Health
+          - tck-module: fault-tolerance
+            tck-name: MicroProfile Fault Tolerance
+          - tck-module: openapi
+            tck-name: MicroProfile Open API
+          - tck-module: rest-client
+            tck-name: MicroProfile REST Client
+          - tck-module: telemetry
+            tck-name: MicroProfile Telemetry
+    name: TCK ${{matrix.tck-name}} - JDK ${{matrix.java}}
 
     steps:
       - uses: actions/checkout@v7
@@ -43,5 +84,8 @@ jobs:
           cache: 'maven'
           cache-dependency-path: '**/pom.xml'
 
-      - name: build with maven
-        run: mvn formatter:validate verify --file pom.xml -Dnative
+      - name: build platform with maven
+        run: mvn formatter:validate install --file pom.xml -pl '!tck' -DskipTests
+
+      - name: run tck ${{matrix.tck-module}}
+        run: mvn verify --file tck/pom.xml -pl ${{matrix.tck-module}} -am
