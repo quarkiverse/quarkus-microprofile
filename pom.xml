@@ -15,6 +15,25 @@
 
   <properties>
     <quarkus.version>3.39.0</quarkus.version>
+
+    <!-- Jakarta 10 -->
+    <jakarta.core.version>10.0.4</jakarta.core.version>
+    <jakarta.cdi.version>4.1.0</jakarta.cdi.version>
+    <jakarta.rest.version>3.1.5</jakarta.rest.version>
+    <jakarta.jsonp.version>2.1.1</jakarta.jsonp.version>
+    <jakarta.jsonb.version>3.0.2</jakarta.jsonb.version>
+    <jakarta.annotation.version>2.1.1</jakarta.annotation.version>
+    <jakarta.inject.version>2.0.1</jakarta.inject.version>
+    <jakarta.interceptors.version>2.2.0</jakarta.interceptors.version>
+
+    <!-- MicroProfile 7.2 -->
+    <microprofile.config.version>3.1.1</microprofile.config.version>
+    <microprofile.jwt.version>2.2</microprofile.jwt.version>
+    <microprofile.health.version>4.0.1</microprofile.health.version>
+    <microprofile.fault-tolerance.version>4.1.2</microprofile.fault-tolerance.version>
+    <microprofile.openapi.version>4.2-RC2</microprofile.openapi.version>
+    <microprofile.rest-client.version>4.0</microprofile.rest-client.version>
+    <microprofile.telemetry.version>2.2-RC3</microprofile.telemetry.version>
   </properties>
 
   <scm>
@@ -51,6 +70,66 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+
+      <!-- TODO - Add dependencies for all MP and Jakarta -->
+
+      <!-- JWT 2.2 - Override Quarkus version from 2.1 -->
+      <!-- Override Quarkus SmallRye JWT to provide the required implementation to MP -->
+      <dependency>
+        <groupId>org.eclipse.microprofile.jwt</groupId>
+        <artifactId>microprofile-jwt-auth-api</artifactId>
+        <version>${microprofile.jwt.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.smallrye</groupId>
+        <artifactId>smallrye-jwt</artifactId>
+        <version>5.0.0-RC2</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>io.smallrye</groupId>
+            <artifactId>smallrye-jwt-build</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>io.smallrye</groupId>
+        <artifactId>smallrye-jwt-build</artifactId>
+        <version>5.0.0-RC2</version>
+      </dependency>
+      <dependency>
+        <groupId>io.smallrye</groupId>
+        <artifactId>smallrye-jwt-common</artifactId>
+        <version>5.0.0-RC2</version>
+      </dependency>
+
+      <!-- OpenAPI 4.2 - Override Quarkus version from 4.1 -->
+      <!-- Quarkus already bundles SmallRye Open API compatible with MP Open API 4.2 -->
+      <dependency>
+        <groupId>org.eclipse.microprofile.openapi</groupId>
+        <artifactId>microprofile-openapi-api</artifactId>
+        <version>${microprofile.openapi.version}</version>
+      </dependency>
+
+      <!-- Telemetry 2.2 - Override Quarkus version from 2.1 -->
+      <!-- Quarkus already complies with  Telemetry 2.2 -->
+      <dependency>
+        <groupId>org.eclipse.microprofile.config</groupId>
+        <artifactId>microprofile-telemetry-api</artifactId>
+        <version>${microprofile.telemetry.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>io.quarkiverse.microprofile</groupId>
         <artifactId>quarkus-microprofile</artifactId>

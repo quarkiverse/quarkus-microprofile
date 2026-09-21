@@ -32,10 +32,6 @@
                         <customer.hobby>Tennis</customer.hobby>
                         <config_ordinal>120</config_ordinal>
                         <quarkus.arc.remove-unused-beans>false</quarkus.arc.remove-unused-beans>
-                        <!-- 1. There is a bug in TCK: -->
-                        <!-- https://github.com/eclipse/microprofile-config/issues/543 -->
-                        <!-- 2. After transformation we get a ClassCastException which is very likely caused by a class loading problem in our Arquillian adapter -->
-                        <quarkus.arc.transform-unproxyable-classes>false</quarkus.arc.transform-unproxyable-classes>
                     </systemPropertyVariables>
                     <dependenciesToScan>
                         <dependency>org.eclipse.microprofile.config:microprofile-config-tck</dependency>
