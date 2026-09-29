@@ -14,7 +14,7 @@
   <name>Quarkus - MicroProfile - Parent</name>
 
   <properties>
-    <quarkus.version>3.39.0</quarkus.version>
+    <quarkus.version>3.40.0</quarkus.version>
 
     <!-- Jakarta 10 -->
     <jakarta.core.version>10.0.4</jakarta.core.version>
