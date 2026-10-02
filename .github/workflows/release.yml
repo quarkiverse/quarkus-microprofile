@@ -31,5 +31,7 @@ jobs:
     name: Publish TCK Report
     uses: ./.github/workflows/publish-tck.yml
     secrets: inherit
+    permissions:
+      contents: write
     with:
       version: ${{github.event.inputs.tag || github.ref_name}}
