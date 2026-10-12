@@ -28,7 +28,7 @@
 
     <!-- MicroProfile 7.2 -->
     <microprofile.config.version>3.1.1</microprofile.config.version>
-    <microprofile.jwt.version>2.2-RC4</microprofile.jwt.version>
+    <microprofile.jwt.version>2.2</microprofile.jwt.version>
     <microprofile.health.version>4.0.1</microprofile.health.version>
     <microprofile.fault-tolerance.version>4.1.2</microprofile.fault-tolerance.version>
     <microprofile.openapi.version>4.2-RC5</microprofile.openapi.version>
