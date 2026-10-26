@@ -111,7 +111,7 @@
       <dependency>
         <groupId>io.smallrye</groupId>
         <artifactId>smallrye-jwt-common</artifactId>
-        <version>5.0.0-RC2</version>
+        <version>5.0.0-RC4</version>
       </dependency>
 
       <!-- OpenAPI 4.2 - Override Quarkus version from 4.1 -->
