@@ -28,12 +28,12 @@
 
     <!-- MicroProfile 7.2 -->
     <microprofile.config.version>3.1.1</microprofile.config.version>
-    <microprofile.jwt.version>2.2-RC4</microprofile.jwt.version>
+    <microprofile.jwt.version>2.2</microprofile.jwt.version>
     <microprofile.health.version>4.0.1</microprofile.health.version>
     <microprofile.fault-tolerance.version>4.1.2</microprofile.fault-tolerance.version>
-    <microprofile.openapi.version>4.2-RC5</microprofile.openapi.version>
+    <microprofile.openapi.version>4.2</microprofile.openapi.version>
     <microprofile.rest-client.version>4.0</microprofile.rest-client.version>
-    <microprofile.telemetry.version>2.2-RC3</microprofile.telemetry.version>
+    <microprofile.telemetry.version>2.2</microprofile.telemetry.version>
   </properties>
 
   <scm>
@@ -83,7 +83,7 @@
       <dependency>
         <groupId>io.smallrye</groupId>
         <artifactId>smallrye-jwt</artifactId>
-        <version>5.0.0-RC2</version>
+        <version>5.0.0</version>
         <exclusions>
           <exclusion>
             <groupId>org.jboss.logging</groupId>
@@ -106,20 +106,69 @@
       <dependency>
         <groupId>io.smallrye</groupId>
         <artifactId>smallrye-jwt-build</artifactId>
-        <version>5.0.0-RC2</version>
+        <version>5.0.0</version>
       </dependency>
       <dependency>
         <groupId>io.smallrye</groupId>
         <artifactId>smallrye-jwt-common</artifactId>
-        <version>5.0.0-RC2</version>
+        <version>5.0.0</version>
       </dependency>
 
       <!-- OpenAPI 4.2 - Override Quarkus version from 4.1 -->
-      <!-- Quarkus already bundles SmallRye Open API compatible with MP Open API 4.2 -->
+      <!-- Override Quarkus SmallRye OpenAPI to provide the required implementation to MP -->
       <dependency>
         <groupId>org.eclipse.microprofile.openapi</groupId>
         <artifactId>microprofile-openapi-api</artifactId>
         <version>${microprofile.openapi.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.smallrye</groupId>
+        <artifactId>smallrye-open-api-core</artifactId>
+        <version>4.4.0</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.annotation.versioning</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>io.smallrye</groupId>
+        <artifactId>smallrye-open-api-jaxrs</artifactId>
+        <version>4.4.0</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.annotation.versioning</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>io.smallrye</groupId>
+        <artifactId>smallrye-open-api-spring</artifactId>
+        <version>4.4.0</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.annotation.versioning</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>io.smallrye</groupId>
+        <artifactId>smallrye-open-api-vertx</artifactId>
+        <version>4.4.0</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.annotation.versioning</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>io.smallrye</groupId>
+        <artifactId>smallrye-open-api-ui</artifactId>
+        <version>4.4.0</version>
       </dependency>
 
       <!-- Telemetry 2.2 - Override Quarkus version from 2.1 -->
