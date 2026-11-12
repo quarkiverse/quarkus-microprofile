@@ -33,6 +33,30 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <!-- The TCK calls StackFrame.getDescriptor() on a StackWalker without RETAIN_CLASS_REFERENCE, which throws on JDK 22+ -->
+            <id>jdk22-excludes</id>
+            <activation>
+                <jdk>[22,)</jdk>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <configuration>
+                            <excludes>
+                                <exclude>ee.jakarta.tck.core.json.ApplicationJsonpIT</exclude>
+                                <exclude>ee.jakarta.tck.core.jsonb.JsonbApplicationIT</exclude>
+                            </excludes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>io.quarkiverse.microprofile</groupId>
