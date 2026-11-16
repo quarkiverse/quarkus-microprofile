@@ -46,6 +46,14 @@
                     <version>${version.surefire.plugin}</version>
                     <configuration>
                         <aggregate>true</aggregate>
+                        <reportsDirectories>
+                            <reportsDirectory>target/surefire-reports</reportsDirectory>
+                            <reportsDirectory>target/failsafe-reports</reportsDirectory>
+                            <reportsDirectory>target/surefire-reports-tracing</reportsDirectory>
+                            <reportsDirectory>target/surefire-reports-metrics</reportsDirectory>
+                            <reportsDirectory>target/surefire-reports-metrics-jvm</reportsDirectory>
+                            <reportsDirectory>target/surefire-reports-logs</reportsDirectory>
+                        </reportsDirectories>
                         <outputName>tck-results</outputName>
                         <outputDirectory>${project.build.directory}</outputDirectory>
                     </configuration>
