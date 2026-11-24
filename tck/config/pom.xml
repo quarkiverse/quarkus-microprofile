@@ -17,6 +17,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/tck-suite.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                     <!-- These env variables are required for org.eclipse.microprofile.config.tck.CDIPropertyNameMatchingTest -->
                     <environmentVariables>
                         <MP_TCK_ENV_DUMMY>dummy</MP_TCK_ENV_DUMMY>

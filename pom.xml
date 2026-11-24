@@ -4,7 +4,7 @@
   <parent>
     <groupId>io.quarkiverse</groupId>
     <artifactId>quarkiverse-parent</artifactId>
-    <version>25</version>
+    <version>26</version>
   </parent>
 
   <groupId>io.quarkiverse.microprofile</groupId>
@@ -14,12 +14,13 @@
   <name>Quarkus - MicroProfile - Parent</name>
 
   <properties>
-    <quarkus.version>3.40.1.1</quarkus.version>
+    <quarkus.version>4.0.0</quarkus.version>
 
     <!-- Jakarta 10 -->
     <jakarta.core.version>10.0.4</jakarta.core.version>
     <jakarta.cdi.version>4.1.0</jakarta.cdi.version>
-    <jakarta.rest.version>3.1.5</jakarta.rest.version>
+    <!-- Jakarta REST 4.0 (EE 11), to match the jakarta.ws.rs-api provided by Quarkus 4 -->
+    <jakarta.rest.version>4.0.1</jakarta.rest.version>
     <jakarta.jsonp.version>2.1.1</jakarta.jsonp.version>
     <jakarta.jsonb.version>3.0.4</jakarta.jsonb.version>
     <jakarta.annotation.version>2.1.1</jakarta.annotation.version>
